@@ -1,0 +1,111 @@
+@import "../../assets/styles/variables.scss";
+
+.header {
+  background-color: $color-white;
+  box-shadow: 0px 4px 5px #e9edf3;
+  padding: 14px 120px;
+  display: flex;
+  align-items: center;
+  .header-time {
+    color: $color-grey-3;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 148%;
+
+    margin-right: 86px;
+  }
+
+  .header-container-progress-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    .header-progress-bar-wrapper + .header-progress-bar-wrapper {
+      margin-left: 56px;
+    }
+    .header-progress-bar-wrapper {
+      line-height: 148%;
+      color: $color-dark-blue-1;
+      display: flex;
+      flex-direction: column;
+      .header-progress-bar {
+        max-width: 156px;
+        min-width: 156px;
+        width: 100%;
+        height: 6px;
+        border-radius: 12px;
+        background-color: $color-grey-4;
+        margin-top: 7px;
+
+        .header-progress-bar__line-green {
+          display: block;
+          height: 100%;
+          width: 67%;
+          background-color: $color-green-1;
+          border-radius: 12px 0 0 12px;
+        }
+
+        .header-progress-bar__line-yellow {
+          display: block;
+          height: 100%;
+          width: 40%;
+          background-color: $color-yellow-2;
+          border-radius: 12px 0 0 12px;
+        }
+
+        .header-progress-bar__line-red {
+          display: block;
+          height: 100%;
+          width: 67%;
+          background-color: $color-red-1;
+          border-radius: 12px 0 0 12px;
+        }
+      }
+
+      .header-progress-bar-green__title {
+        span {
+          color: $color-green-1;
+          margin-left: 1px;
+        }
+      }
+
+      .header-progress-bar-yellow__title {
+        span {
+          color: $color-yellow-2;
+          margin-left: 1px;
+        }
+      }
+      .header-progress-bar-red__title {
+        span {
+          color: $color-red-1;
+          margin-left: 1px;
+        }
+      }
+    }
+  }
+
+  .header-container-navbar {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin-left: auto;
+
+    button {
+      display: flex;
+      align-items: center;
+
+      img {
+        margin-left: 10px;
+      }
+    }
+    .button-serach {
+      margin-right: 64px;
+    }
+
+    .button-owner {
+      margin-right: 47px;
+    }
+
+    .button-accout {
+    }
+  }
+}

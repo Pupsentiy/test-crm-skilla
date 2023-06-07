@@ -1,0 +1,97 @@
+@import "../../assets/styles/variables.scss";
+
+.sidebar {
+  background-color: $color-dark-blue;
+  color: $color-grey-1;
+  width: 240px;
+  height: 100%;
+  min-height: 100vh;
+
+  .logo {
+    margin: 20px 0 0 12px;
+  }
+
+  .sidebar-menu {
+    margin-top: 32px;
+
+    .sidebar-menu-item {
+      display: flex;
+      .item__link {
+        padding: 15px 13px;
+        width: 100%;
+        border-left: 3px solid transparent;
+        &:hover {
+          background-color: $color-grey-2;
+          color: $color-white;
+        }
+        &:hover > .link-img * {
+          fill-opacity: 1;
+        }
+
+        .link-img {
+          margin-right: 13px;
+        }
+      }
+
+      .item__link-active {
+        border-left: 3px solid $color-blue-1;
+        background-color: $color-grey-2;
+        color: $color-white;
+        position: relative;
+        display: flex;
+        align-items: center;
+        .link__dot {
+          display: block;
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          position: absolute;
+          top: 43%;
+          right: 5%;
+          background-color: $color-yellow-1;
+          box-shadow: 0px 3px 8px rgba(237, 218, 1, 0.5);
+        }
+      }
+
+      .item__link-active > .link-img * {
+        fill-opacity: 1;
+      }
+    }
+  }
+
+  .sidebar-container-buttons {
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px;
+    .sidebar-container-buttons__button {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      padding: 13px 40px 13px 13px;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 148%;
+      color: $color-white;
+      background-color: $color-blue-2;
+      border-radius: 4px;
+      position: relative;
+      &:hover {
+        background-color: $color-blue-3;
+      }
+      &:active {
+        background-color: $color-blue-4;
+      }
+      img {
+        position: absolute;
+        top: auto;
+        right: 5%;
+      }
+
+      &:first-child {
+        margin-top: 64px;
+        margin-bottom: 32px;
+      }
+    }
+  }
+}
